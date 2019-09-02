@@ -17,10 +17,7 @@ class Waiter
       Meal.new(self, customer, total, tip)
     end
 
-    def meals #In plain English, the customer is going to 
-      # look at all of the meals, and then select
-      # only the ones that belong to them. Translated into code,
-      # that could be written like the following:
+    def meals 
       Meal.all.select do |meal|
       meal.customer == self
     end
